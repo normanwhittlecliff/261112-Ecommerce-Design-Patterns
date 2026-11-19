@@ -27,9 +27,76 @@ Projeto acadêmico desenvolvido em **Java puro** (sem frameworks externos e com 
 
 ```text
 src/
-└── ecommerce/
-    ├── Main.java                 # Ponto de entrada da aplicação
-    ├── model/                    # Entidades, regras de negócio, VO e DAO
-    ├── view/                     # Interface de console (Scanner e System.out)
-    ├── controller/               # Controladores e Commands do menu
-    └── patterns/                 # Implementações isoladas dos padrões GOF
+└── main/
+    └── java/
+        └── br/com/ecommerce/
+            │
+            ├── Main.java
+            │
+            ├── model/
+            │   ├── entity/
+            │   │   ├── Produto.java
+            │   │   ├── ProdutoFisico.java
+            │   │   ├── ProdutoDigital.java
+            │   │   ├── Cliente.java
+            │   │   ├── Carrinho.java
+            │   │   └── Pedido.java
+            │   │
+            │   ├── dao/
+            │   │   └── ProdutoDAO.java
+            │   │
+            │   ├── database/
+            │   │   └── BancoDeMemoria.java
+            │   │
+            │   ├── vo/
+            │   │   ├── ProdutoVO.java
+            │   │   └── CarrinhoVO.java
+            │   │
+            │   ├── factory/
+            │   │   └── ProdutoFactory.java
+            │   │
+            │   ├── decorator/
+            │   │   ├── ProdutoDecorator.java
+            │   │   └── EmbalagemPresenteDecorator.java
+            │   │
+            │   ├── discount/
+            │   │   ├── DescontoHandler.java
+            │   │   ├── CupomHandler.java
+            │   │   ├── VipHandler.java
+            │   │   └── FreteGratisHandler.java
+            │   │
+            │   ├── payment/
+            │   │   ├── PagamentoStrategy.java
+            │   │   ├── PagamentoPix.java
+            │   │   ├── PagamentoCartao.java
+            │   │   └── adapter/
+            │   │       └── PayPalAdapter.java
+            │   │
+            │   ├── checkout/
+            │   │   ├── CheckoutFacade.java
+            │   │   └── ProcessamentoPedido.java
+            │   │
+            │   ├── observer/
+            │   │   ├── ObservadorPagamento.java
+            │   │   ├── NotaFiscal.java
+            │   │   └── DisparadorDeEmail.java
+            │   │
+            │   ├── memento/
+            │   │   ├── CarrinhoMemento.java
+            │   │   └── HistoricoCarrinho.java
+            │   │
+            │   └── iterator/
+            │       └── ...
+            │
+            ├── controller/
+            │   ├── MenuController.java
+            │   └── command/
+            │       ├── Comando.java
+            │       ├── ListarProdutosCommand.java
+            │       ├── ComprarCommand.java
+            │       └── SairCommand.java
+            │
+            └── view/
+                ├── MenuView.java
+                ├── ProdutoView.java
+                └── CarrinhoView.java

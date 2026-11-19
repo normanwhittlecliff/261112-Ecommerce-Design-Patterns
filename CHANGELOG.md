@@ -18,6 +18,10 @@ This project is currently under development. Versions represent development mile
 - The package src.ecommerce.controller
 	- The file MenuController
 
+### Changed
+- produtoVO toStirng().
+
+
 ---
 
 ## [v0.2.0] - 2026-11-18
