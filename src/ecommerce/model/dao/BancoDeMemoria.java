@@ -2,6 +2,7 @@ package src.ecommerce.model.dao;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import src.ecommerce.model.vo.ProdutoVO;
 
@@ -23,13 +24,94 @@ public class BancoDeMemoria {
     //O Construtor precisa ser PRIVADO
     //impede que alguém de fora dê um "new BancoDeMemoria()"
     private BancoDeMemoria() {
-        tabelaProdutos = new ArrayList<>();
+    	
+    	tabelaProdutos = new ArrayList<>();
         
-        tabelaProdutos.add(new ProdutoVO(1, "Livro Físico - Clean Code", 120.00));
+        tabelaProdutos.add(new ProdutoVO(1, "Livros - Clean Code", 120.00));
         tabelaProdutos.add(new ProdutoVO(2, "E-book - Clean Code", 85.00));
-        tabelaProdutos.add(new ProdutoVO(3, "Livro Físico - box: O Senhor dos Anéis", 250.00));
-        tabelaProdutos.add(new ProdutoVO(4, "E-book - box: O Senhor dos Anéis", 45.00));
-        tabelaProdutos.add(new ProdutoVO(5, "Livro Físico - Arquitetura Limpa", 110.00));
+        tabelaProdutos.add(new ProdutoVO(3, "Livros - Box: O Senhor dos Anéis", 450.00));
+        tabelaProdutos.add(new ProdutoVO(4, "E-book - Box: O Senhor dos Anéis", 45.00));
+        tabelaProdutos.add(new ProdutoVO(5, "Livros - Arquitetura Limpa", 110.00));
+        tabelaProdutos.add(new ProdutoVO(6, "E-Book - Arquitetura Limpa", 11.00));
+        
+        tabelaProdutos.add(new ProdutoVO(7, "Livros - Think Python", 110.00));
+        tabelaProdutos.add(new ProdutoVO(8, "E-Book - Think Python", 11.00));
+        tabelaProdutos.add(new ProdutoVO(9,  "Livros - Box: The Witcher", 200.00));
+        tabelaProdutos.add(new ProdutoVO(10, "E-Book - Box: The Witcher", 25.00));
+    	
+    	String[] titleStarts = {
+    	        "O Livro de",
+    	        "Como Entender",
+    	        "O Segredo da Vida Sobre",
+    	        "Um Guia para Iniciantes Sobre",
+    	        "A Arte de",
+    	        "O Curioso Caso sobre",
+    	        "101 Maneiras de Maestrar",
+    	        "O Esquecido Mundo sobre",
+    	        "Uma Introdução sobre",
+    	        "Guia DEFINITIVO sobre"
+    	    };
+
+    	String[] ideas = {
+    	        "Gatos",
+    	        "Culinária",
+    	        "Inteligência Artificial",
+    	        "Viagem no Tempo",
+    	        "Café",
+    	        "Dragões",
+    	        "Programação",
+    	        "Jardinagem",
+    	        "Exploração Interestelar",
+    	        "Mistérios Antigos",
+    	        "Video Games",
+    	        "Filosofía",
+    	        "Sobreviver uma Segunda-Feira",
+    	        "a Internet",
+    	        "Cultivo de Batata Doce",
+    	        "Magía e Alquimia",
+    	        "Cybersecurity",
+    	        "Civilizações Perdidas",
+    	        "Robôs",
+    	        "GTA 6",
+    	        "Física Quântica",
+    	        "Glauber Pires"
+    	    };
+        
+        Random random = new Random();
+
+        int id = 11;
+        int totalBooks = 20;  // Ser[a multiplicado por 2
+
+        for (int i = 0; i < totalBooks; i++) {
+
+            // Generate a random book title
+            String title = titleStarts[random.nextInt(titleStarts.length)] + " " + ideas[random.nextInt(ideas.length)];
+
+            // Generate a random e-book price
+            double ebookPrice = 5 + (random.nextDouble() * 15);
+
+            // Physical book costs 10 times more
+            double physicalPrice = ebookPrice * 10;
+
+            // Add physical edition
+            tabelaProdutos.add(
+                new ProdutoVO(
+                    id++,
+                    "Livros - " + title,
+                    physicalPrice
+                )
+            );
+
+            // Add digital edition
+            tabelaProdutos.add(
+                new ProdutoVO(
+                    id++,
+                    "E-book - " + title,
+                    ebookPrice
+                )
+            );
+        }
+        
     }
     
     // Criar um método público estático 

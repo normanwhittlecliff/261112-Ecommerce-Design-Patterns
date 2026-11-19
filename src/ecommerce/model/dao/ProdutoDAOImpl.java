@@ -2,7 +2,9 @@ package src.ecommerce.model.dao;
 
 import java.util.List;
 
+import src.ecommerce.model.interator.Iterator;
 import src.ecommerce.model.vo.ProdutoVO;
+import src.ecommerce.model.interator.ProdutoIterator;
 
  //Implementação das assinaturas do ProdutoDAO
  //conecta as regra do DAO (buscar e salvar) + "banco de dados" -> BancoDeMemoria
@@ -22,13 +24,13 @@ public class ProdutoDAOImpl implements ProdutoDAO {
     @Override
     public void salvar(ProdutoVO produto) {
         // Pega a lista do banco e adiciona o produto novo
-        banco.getTabelaProdutos().add(produto);
+    	BancoDeMemoria.getInstance().getTabelaProdutos().add(produto);
     }
 
     @Override
     public List<ProdutoVO> buscarTodos() {
         // Retorna a lista inteira de produtos
-        return banco.getTabelaProdutos();
+        return BancoDeMemoria.getInstance().getTabelaProdutos();
     }
 
     @Override
@@ -41,5 +43,15 @@ public class ProdutoDAOImpl implements ProdutoDAO {
             }
         }
         return null; // Se acabar a lista e não achar, devolve "vazio" (null)
+    }
+
+    /* DESIGN PATTERN: ITERATOR
+     * Cria um Iterator para percorrer os produtos.
+     *
+     * @return Iterator de ProdutoVO.
+     */
+    @Override
+    public Iterator<ProdutoVO> criarIterator() {
+        return new ProdutoIterator(buscarTodos());
     }
 }

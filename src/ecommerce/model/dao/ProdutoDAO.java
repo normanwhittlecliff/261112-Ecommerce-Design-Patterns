@@ -2,6 +2,7 @@ package src.ecommerce.model.dao;
 
 import java.util.List;
 
+import src.ecommerce.model.interator.Aggregate;
 import src.ecommerce.model.vo.ProdutoVO;
 
 //Padrão DAO: (Data Access Object) - Interface
@@ -9,7 +10,7 @@ import src.ecommerce.model.vo.ProdutoVO;
 //Esconde a complexidade de como os dados são salvos
 //só as "assinaturas" dos métodos. 
 
-public interface ProdutoDAO {
+public interface ProdutoDAO extends Aggregate<ProdutoVO> {
     
 	// busca todos os produtos cadastrados.
     List<ProdutoVO> buscarTodos();

@@ -10,16 +10,13 @@ This project is currently under development. Versions represent development mile
 
 ## [v0.2.1]
 
+
 ### Added
 
-- The rest of the MVC design.
-- The package src.ecommerce.view
-	- The file MenuView 
-- The package src.ecommerce.controller
-	- The file MenuController
+Interator and its thingys 
 
 ### Changed
-- produtoVO toStirng().
+
 
 
 ---
@@ -33,10 +30,16 @@ This project is currently under development. Versions represent development mile
 - Created the `CHANGELOG.md` file to document the project's development history, updates, and version progression.
 - Established a versioning system to track the project's development milestones.
 - Created a super simple Main java file.
+- The rest of the MVC design.
+- The package src.ecommerce.view
+	- The file MenuView 
+- The package src.ecommerce.controller
+	- The file MenuController
 
 ### Changed
 - The project structure was slightly changed to be able to run in Eclipse. 
 - There is a sorce folder called scr and a package called src.
+- produtoVO toStirng().
 
 ### Notes
 - Project development continues from the previous milestone, with 8 out of the 16 planned Design Patterns already implemented.

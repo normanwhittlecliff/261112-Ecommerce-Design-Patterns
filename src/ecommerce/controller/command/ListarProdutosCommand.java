@@ -1,6 +1,7 @@
 package src.ecommerce.controller.command;
 
 import src.ecommerce.model.dao.ProdutoDAOImpl;
+import src.ecommerce.model.interator.Iterator;
 import src.ecommerce.model.vo.ProdutoVO;
 import src.ecommerce.view.MenuView;
 
@@ -10,6 +11,8 @@ import src.ecommerce.view.MenuView;
 public class ListarProdutosCommand implements Command{
 
 	private MenuView view;
+	
+	
 
     public ListarProdutosCommand(MenuView view) {
         this.view = view;
@@ -21,9 +24,23 @@ public class ListarProdutosCommand implements Command{
     @Override
     public void executar() {
     	view.exibirTítulo("Lista de Produtos");
-        for (ProdutoVO produto : new ProdutoDAOImpl().buscarTodos()) {
-            System.out.println(produto);
+    	
+    	Iterator<ProdutoVO> iterator = new ProdutoDAOImpl().criarIterator();
+    	
+    	if (!iterator.hasNext()) {
+            System.out.println("Nenhum produto encontrado.");
+            return;
         }
+    	
+    	while (iterator.hasNext()) {
+    		System.out.println(iterator.next());
+    	}
+    	
+//        for (ProdutoVO produto : new ProdutoDAOImpl().buscarTodos()) {
+//            System.out.println(produto);
+//        }
+        
+        
     }
 
 }

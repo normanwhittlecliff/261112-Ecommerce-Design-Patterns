@@ -45,7 +45,7 @@ public class ProdutoVO {
     @Override
     public String toString() {
     	return String.format(
-    	        "ID: %04d | Produto: %-40s | Preço: R$ %.2f",
+    	        "ID: %04d | Produto: %-50s | Preço: R$ %.2f",
     	        id, nome, preco
     	    );
     }
