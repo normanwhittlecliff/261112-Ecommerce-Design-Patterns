@@ -9,10 +9,6 @@ public class ListarProdutosCommand implements Command{
 
 	private MenuView view;
 
-    /**
-     * Permite que o comando apresente mensagens ao usuário
-     * sem precisar utilizar System.out diretamente.
-     */
     public ListarProdutosCommand(MenuView view) {
         this.view = view;
     }
@@ -26,9 +22,7 @@ public class ListarProdutosCommand implements Command{
      */
     @Override
     public void executar() {
-        view.exibirMensagem(
-            "A funcionalidade de produtos será implementada em breve!"
-        );
+        view.exibirMensagem("A funcionalidade de produtos será implementada em breve!");
     }
 
 }
