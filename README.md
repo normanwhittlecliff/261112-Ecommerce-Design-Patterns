@@ -1,21 +1,8 @@
-# E-Commerce CLI — Arquitetura de Software
+# 🛒 E-Commerce CLI — Arquitetura de Software
 
 Projeto acadêmico desenvolvido em **Java puro** (sem frameworks externos e com interface via linha de comando) com o objetivo de demonstrar a aplicação prática da arquitetura **MVC** combinada com **16 Padrões de Projeto (Design Patterns)** em um cenário de loja virtual de livros.
 
----
-
-## Informação
-- **Project ID**: 261112
-- **Title(s)**:
-    - E-Commerce CLI — Arquitetura de Software
-    - Ecommerce Design Patterns
-- **Creator(s)**: [Leila Giangiardi](https://github.com/LeilaGiangiardi) e [Norman Santos](https://github.com/normanwhittlecliff)
-- **Date of Creation**: ...
-- **Language**: Java
-
----
-
-## Padrões Implementados
+## 🏗️ Padrões Implementados
 
 | # | Padrão | Categoria | Aplicação no Projeto |
 | :--- | :--- | :--- | :--- |
@@ -36,7 +23,7 @@ Projeto acadêmico desenvolvido em **Java puro** (sem frameworks externos e com 
 | **15** | **Template Method** | Comportamental | Define a ordem fixa de processar o pedido: Baixar Estoque -> Cobrar -> Entregar (Variando apenas a forma de entrega). |
 | **16** | **Observer** | Comportamental | O módulo de pagamento notifica (`notify`) os ouvintes (`NotaFiscal` e `DisparadorDeEmail`) assim que a compra é aprovada. |
 
-## Estrutura de Pacotes
+## 📂 Estrutura de Pacotes
 
 ```text
 src/

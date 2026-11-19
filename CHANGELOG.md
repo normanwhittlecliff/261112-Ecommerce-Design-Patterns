@@ -8,25 +8,31 @@ This project is currently under development. Versions represent development mile
 
 ---
 
-## [Unreleased]
+## [v0.2.1]
 
-Changes currently being developed and not yet assigned to a version.
+### Added
+
+- The rest of the MVC design.
+- The package src.ecommerce.view
+	- The file MenuView 
+- The package src.ecommerce.controller
+	- The file MenuController
 
 ---
 
 ## [v0.2.0] - 2026-11-18
 
 **Project Stage:** Development — 8/16 Design Patterns Implemented  
-**Responsible:** [Your Name]
+**Responsible:** Norman
 
 ### Added
 - Created the `CHANGELOG.md` file to document the project's development history, updates, and version progression.
 - Established a versioning system to track the project's development milestones.
-- Added documentation to acknowledge individual contributions and maintain a record of project ownership and development.
+- Created a super simple Main java file.
 
 ### Changed
-- Assumed responsibility for the continuation and further development of the project.
-- Established a more organized approach to documenting future changes and implementations.
+- The project structure was slightly changed to be able to run in Eclipse. 
+- There is a sorce folder called scr and a package called src.
 
 ### Notes
 - Project development continues from the previous milestone, with 8 out of the 16 planned Design Patterns already implemented.
