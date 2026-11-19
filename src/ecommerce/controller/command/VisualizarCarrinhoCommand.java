@@ -20,7 +20,7 @@ public class VisualizarCarrinhoCommand implements Command {
     @Override
     public void executar() {
         view.exibirMensagem(
-            "A funcionalidade do carrinho será implementada em breve!"
+            "A funcionalidade VIZUALIZAR CARRINHO será implementada em breve!"
         );
     }
 }

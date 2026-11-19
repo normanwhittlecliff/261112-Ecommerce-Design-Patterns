@@ -13,9 +13,14 @@ public class MenuView {
 
     public void exibirMenu() {
     	exibirTítulo("E-COMMERCE CLI");
-        System.out.println("1. Listar produtos");
-        System.out.println("2. Visualizar carrinho");
-        System.out.println("0. Sair");
+    	System.out.println("1 - Listar Produtos");
+    	System.out.println("2 - Visualizar detalhes de um livro");
+        System.out.println("3 - Adicionar produto ao carrinho");
+        System.out.println("4 - Visualizar carrinho");
+        System.out.println("5 - Remover produto do carrinho");
+        System.out.println("6 - Aplicar desconto / cupom");
+        System.out.println("7 - Finalizar compra");
+        System.out.println("\n0 - Sair");
         System.out.println("================================");
         System.out.print("Escolha uma opção: ");
     }

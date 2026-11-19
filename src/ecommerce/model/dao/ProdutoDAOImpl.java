@@ -2,9 +2,9 @@ package src.ecommerce.model.dao;
 
 import java.util.List;
 
-import src.ecommerce.model.interator.Iterator;
+import src.ecommerce.model.iterator.Iterator;
+import src.ecommerce.model.iterator.ProdutoIterator;
 import src.ecommerce.model.vo.ProdutoVO;
-import src.ecommerce.model.interator.ProdutoIterator;
 
  //Implementação das assinaturas do ProdutoDAO
  //conecta as regra do DAO (buscar e salvar) + "banco de dados" -> BancoDeMemoria

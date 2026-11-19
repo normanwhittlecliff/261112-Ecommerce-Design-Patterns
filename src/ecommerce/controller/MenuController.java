@@ -3,10 +3,15 @@ package src.ecommerce.controller;
 import java.util.HashMap;
 import java.util.Map;
 
+import src.ecommerce.controller.command.AdicionarProdutoNoCarrinhoCommand;
+import src.ecommerce.controller.command.AplicarDescontoCommand;
 import src.ecommerce.controller.command.Command;
+import src.ecommerce.controller.command.FinalizarComprasCommand;
 import src.ecommerce.controller.command.ListarProdutosCommand;
+import src.ecommerce.controller.command.RemoverProdutoDoCarrinhoCommand;
 import src.ecommerce.controller.command.SairCommand;
 import src.ecommerce.controller.command.VisualizarCarrinhoCommand;
+import src.ecommerce.controller.command.VisualizarProtudoDetalhadoCommand;
 import src.ecommerce.view.MenuView;
 
 /**
@@ -51,7 +56,12 @@ public class MenuController {
     private void inicializarComandos() {
     	commands = new HashMap<>();
     	commands.put("1", new ListarProdutosCommand(view));
-    	commands.put("2", new VisualizarCarrinhoCommand(view));
+    	commands.put("2", new VisualizarProtudoDetalhadoCommand(view));
+    	commands.put("3", new AdicionarProdutoNoCarrinhoCommand(view));
+    	commands.put("4", new VisualizarCarrinhoCommand(view));
+    	commands.put("5", new RemoverProdutoDoCarrinhoCommand(view));
+    	commands.put("6", new AplicarDescontoCommand(view));
+    	commands.put("7", new FinalizarComprasCommand(view));
     	commands.put("0", new SairCommand(view, this::encerrar));
     }
 

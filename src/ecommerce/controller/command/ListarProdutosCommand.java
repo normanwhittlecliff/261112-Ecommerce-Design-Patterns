@@ -1,7 +1,7 @@
 package src.ecommerce.controller.command;
 
 import src.ecommerce.model.dao.ProdutoDAOImpl;
-import src.ecommerce.model.interator.Iterator;
+import src.ecommerce.model.iterator.Iterator;
 import src.ecommerce.model.vo.ProdutoVO;
 import src.ecommerce.view.MenuView;
 

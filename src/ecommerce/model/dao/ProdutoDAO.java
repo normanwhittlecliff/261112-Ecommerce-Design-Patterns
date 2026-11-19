@@ -2,7 +2,7 @@ package src.ecommerce.model.dao;
 
 import java.util.List;
 
-import src.ecommerce.model.interator.Aggregate;
+import src.ecommerce.model.iterator.Aggregate;
 import src.ecommerce.model.vo.ProdutoVO;
 
 //Padrão DAO: (Data Access Object) - Interface
